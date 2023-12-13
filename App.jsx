@@ -51,7 +51,7 @@ export default function App() {
       const stringifiedTodoList = await AsyncStorage.getItem("@todolist");
       if (stringifiedTodoList !== null) {
         const parsedTodoList = JSON.parse(stringifiedTodoList);
-        isLoadUpdate(true);
+        isLoadUpdate = true;
         setTodoList(parsedTodoList);
       }
     } catch (e) {
